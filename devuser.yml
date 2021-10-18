@@ -1,0 +1,19 @@
+--- 
+- name: Get Device Facts
+  hosts: junos
+  gather_facts: no
+
+  vars_files:
+   - hosts_vars.yml
+
+  
+  tasks:
+  - name: Configure a new user "devuser" login
+    junos_user:
+      name: devuser
+      role: super-user
+      encrypted_pasword: admin
+      state: present
+    register: response
+ 
+  
