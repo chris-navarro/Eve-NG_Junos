@@ -13,6 +13,7 @@ junos-siteA:
     ansible_become: yes
     ansible_become_method: enable
     ansible_command_timeout: 600
+    ansible_provider_timeout: 100
     ansible_port: 22
     ansible_user: cn02945
     ansible_password: ebn10388**
@@ -29,6 +30,7 @@ junos-siteB:
     ansible_become: yes
     ansible_become_method: enable
     ansible_command_timeout: 600
+    ansible_provider_timeout: 100
     ansible_port: 22
     ansible_user: cn02945
     ansible_password: ebn10388**
@@ -45,6 +47,7 @@ junos-siteC:
     ansible_become: yes
     ansible_become_method: enable
     ansible_command_timeout: 600
+    ansible_provider_timeout: 100
     ansible_port: 22
     ansible_user: cn02945
     ansible_password: ebn10388**
