@@ -14,7 +14,7 @@
       role: super-user
       encrypted_password: "{{ 'admin' | password_hash('sha512') }}"
       provider:
-        timeout: 100
+        timeout: 600
       state: present
     
     register: response
