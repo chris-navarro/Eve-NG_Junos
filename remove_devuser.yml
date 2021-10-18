@@ -11,8 +11,4 @@
   - name: Remove user "devuser" login
     junos_user:
       name: devuser
-      provider:
-        timeout: 1000
       state: absent
-    
-    register: response
