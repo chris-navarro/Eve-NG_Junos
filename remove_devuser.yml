@@ -12,5 +12,5 @@
     junos_user:
       name: devuser
       provider:
-        timeout: 100
+        timeout: 600
       state: absent
