@@ -16,7 +16,6 @@
       provider:
         timeout: 1000
       state: present
-    
-    register: response
+
  
   
