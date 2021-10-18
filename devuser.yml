@@ -12,7 +12,7 @@
     junos_user:
       name: devuser
       role: super-user
-      pasword: admin
+      password: admin
       state: present
     register: response
  
