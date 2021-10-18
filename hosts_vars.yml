@@ -1,0 +1,56 @@
+---
+##Ansible Hosts File for Home Lab
+
+junos-siteA:
+  hosts:
+    rsiteA-t2b01-vmx-junos:
+      ansible_host: 10.0.0.1
+    rsiteA-t2b02-vmx-junos:
+      ansible_host: 10.0.0.2
+  vars:
+    ansible_connection: local
+    ansible_network_os: junos
+    ansible_become: yes
+    ansible_become_method: enable
+    ansible_command_timeout: 600
+    ansible_port: 22
+    ansible_user: cn02945
+    ansible_password: ebn10388**
+
+junos-siteB:
+  hosts:
+    rsiteB-t2b01-vmx-junos:
+      ansible_host: 10.0.2.1
+    rsiteB-t2b02-vmx-junos:
+      ansible_host: 10.0.2.2
+  vars:
+    ansible_connection: local
+    ansible_network_os: junos
+    ansible_become: yes
+    ansible_become_method: enable
+    ansible_command_timeout: 600
+    ansible_port: 22
+    ansible_user: cn02945
+    ansible_password: ebn10388**
+    
+junos-siteC:
+  hosts:
+    rsiteC-t2b01-vmx-junos:
+      ansible_host: 10.0.1.1
+    rsiteC-t2b02-vmx-junos:
+      ansible_host: 10.0.1.2
+  vars:
+    ansible_connection: local
+    ansible_network_os: junos
+    ansible_become: yes
+    ansible_become_method: enable
+    ansible_command_timeout: 600
+    ansible_port: 22
+    ansible_user: cn02945
+    ansible_password: ebn10388**
+
+junos:
+  children:
+    junos-siteA:
+    junos-siteB:
+    junos-siteC:
