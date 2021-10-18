@@ -12,7 +12,7 @@
     junos_user:
       name: devuser
       role: super-user
-      encrypted_pasword: admin
+      encrypted_pasword: admin | password_hash('sha512')
       state: present
     register: response
  
