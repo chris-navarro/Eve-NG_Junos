@@ -12,7 +12,7 @@
     junos_user:
       name: devuser
       role: super-user
-      encrypted_password: " 'admin' | password_hash('sha512') "
+      encrypted_password: admin
       provider:
         timeout: 600
       state: present
